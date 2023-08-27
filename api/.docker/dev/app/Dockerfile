@@ -11,7 +11,7 @@ RUN apt-get update \
     && pecl install swoole \
     && docker-php-ext-enable swoole \
 # Install Node (v16 LTS) (required by Octane)
-    && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
 # Install NPM (required by Octane)
     && npm install -g npm \

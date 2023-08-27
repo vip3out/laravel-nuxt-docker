@@ -49,6 +49,7 @@ if [ "$NUXT_VERSION" == 2 ]; then
 else
     docker compose -f "$COMPOSE_FILE" run --rm --no-deps \
         --user "$(id -u)":"$(id -g)" "$APP_CONTAINER" \
+        mkdir .yarn-cache && export cache=./.yarn-cache
         npx nuxi init "$TEMP_INSTALL_DIRECTORY"
 fi
 

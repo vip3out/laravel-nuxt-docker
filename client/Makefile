@@ -130,6 +130,7 @@ danger.remove: down
 		public \
 		static \
 		store \
+		server \
 		.editorconfig \
 		.env \
 		app.vue \
@@ -139,4 +140,5 @@ danger.remove: down
 		package.json \
 		README.md \
 		tsconfig.json \
-		yarn.lock
+		yarn.lock \
+		.yarn-cache

@@ -271,4 +271,5 @@ danger.remove: down
 		package.json \
 		phpunit.xml \
 		README.md \
-		webpack.mix.js
+		webpack.mix.js \
+		vite.config.js

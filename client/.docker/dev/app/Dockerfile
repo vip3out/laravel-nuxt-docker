@@ -1,5 +1,5 @@
 # Image
-FROM node:16-alpine
+FROM node:18-alpine
 
 # Update dependencies
 RUN apk update \

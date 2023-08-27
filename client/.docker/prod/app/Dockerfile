@@ -1,5 +1,5 @@
 # Builder image
-FROM node:16-alpine as builder
+FROM node:18-alpine as builder
 
 # Set up the working directory
 WORKDIR /var/www/html
@@ -26,7 +26,7 @@ RUN rm -rf node_modules && \
   --production=true
 
 # Serving image
-FROM node:16-alpine
+FROM node:18-alpine
 
 # Set up the working directory
 WORKDIR /var/www/html
