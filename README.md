@@ -1,8 +1,6 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
-
 # Dockerized template for your next project with Laravel and Nuxt
 
-Well tested on Ubuntu 18.04, 19.10 and 20.04.
+forked from: [https://github.com/nevadskiy/laravel-nuxt-docker]
 
 ## 🍬 Stack includes
 
@@ -20,7 +18,7 @@ Well tested on Ubuntu 18.04, 19.10 and 20.04.
 
 ## 📜 Introduction
 
-The project is just separate pre-configured Laravel and Nuxt applications that are stored in the same [monorepo](https://en.wikipedia.org/wiki/Monorepo). 
+The project is just separate pre-configured Laravel and Nuxt applications that are stored in the same [monorepo](https://en.wikipedia.org/wiki/Monorepo).
 
 Each app has its docker templates for development and production and does not have the actual application code.
 So you can install and run them completely separately from each other.
@@ -35,9 +33,27 @@ git clone https://github.com/nevadskiy/laravel-nuxt-docker.git app
 cd app
 ```
 
+### Getting Started
+
+#### Install
+
+#### API
+```bash
+make api.install
+```
+
+This will install and run a fresh new Laravel app which will be available on `http://localhost:8000`.
+
+#### Client
+
+```bash
+make client.install
+```
+
+This will install and run a fresh new Nuxt 3 app which will be available on `http://localhost:3000`.
 ### API
 
-#### Quick installation
+##### Installation
 
 ```bash
 cd api
@@ -49,20 +65,6 @@ This will install and run a fresh new Laravel app which will be available on `ht
 #### Advanced installation
 
 Read more about an [advanced API installation](./api/DOCUMENTATION.md).
-
-### Client
-
-#### Quick installation
-
-```bash
-cd client
-./install
-```
-
-This will install and run a fresh new Nuxt 3 app which will be available on `http://localhost:3000`.
-
-#### Advanced installation
-
 Read more about an [advanced client installation](./client/DOCUMENTATION.md).
 
 ### Gateway (optional)
@@ -75,8 +77,8 @@ The project includes a simple gateway application that can easily help with this
 
 It can also be useful to run locally and set up an application to use subdomains and test CORS and other possible issues.
 
-If you want to deploy your project using the "single host" approach, install the `gateway` application according to [its documentation](./gateway/README.md). 
-Otherwise, you can safely delete it. 
+If you want to deploy your project using the "single host" approach, install the `gateway` application according to [its documentation](./gateway/README.md).
+Otherwise, you can safely delete it.
 For local development you can ignore it completely.
 
 Of course, you can replace it with a more professional tool, like [Traefik](https://traefik.io).
@@ -97,8 +99,3 @@ But the SSR request is sent by the node server, not the browser, and should be s
 - [Client](./client/DOCUMENTATION.md)
 - [Gateway](./gateway/README.md)
 - [Deployment](./docs/DEPLOYMENT.md)
-
-## ☕ Contributing
-
-If you see anything that can be improved, feel free to make a pull request.
-Contributions are welcome and will be fully credited.
